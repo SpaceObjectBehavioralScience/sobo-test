@@ -1,14 +1,319 @@
-@prefix : <http://www.semanticweb.org/sobo/sobo-edit.owl#> .
+@prefix : <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/sobo/sobo-edit.owl> .
+@base <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl> .
 
-<http://www.semanticweb.org/sobo/sobo-edit.owl> rdf:type owl:Ontology ;
-                                                
-                                                owl:imports <http://purl.obolibrary.org/obo/ro/core.owl> .
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl> rdf:type owl:Ontology ;
+                                                                                                             
+                                                                                                             owl:imports <http://purl.obolibrary.org/obo/ro/core.owl> .
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000000
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000000> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "space object"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000001
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000001> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "maneuver"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                                                                                          
+                                                                                                                          rdfs:comment "Results in a change in orbit trajectory of the space object" .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000002
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000002> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "attitude control process"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000003
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000003> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "attitude state"@en .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000004
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000004> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "controlled"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000003> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000005
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000005> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "uncontrolled"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000003> ;
+                                                                                                                          
+                                                                                                                          <http://purl.obolibrary.org/obo/IAO_0000118> "tumbling" .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000006
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000006> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "active attitude control process"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000002> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000007
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000007> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "passive attitude control process"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000002> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000008
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000008> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "active controlled state"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000004> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000009
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000009> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "passive controlled state"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000004> ;
+                                                                                                                          
+                                                                                                                          rdfs:comment "satellite is spinning to passively maintain its attitude" .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000010
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000010> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "stationkeeping process"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                                                                                          
+                                                                                                                          rdfs:comment "A process that is carried out via maneuvers and aims to keep a satellite within a bounding box." .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000011
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000011> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "deorbit maneuver"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000001> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000012
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000012> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "repositioning maneuver"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000001> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000013
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000013> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "satellite operator"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000014
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000014> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "east-west stationkeeping process"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000010> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000015
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000015> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "north-south stationkeeping process"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000010> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000016
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000016> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "satellite"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000000> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000017
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000017> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "satellite communication process"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000018
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000018> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "satellite radio frequency communication process"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000017> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000019
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000019> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "command communication process"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000018> ;
+                                                                                                                          
+                                                                                                                          rdfs:comment "A one way communicatin process from an operator to a satellite." .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000020
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000020> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "payload communication process"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000018> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000021
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000021> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "telemetry"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000018> ;
+                                                                                                                          
+                                                                                                                          rdfs:comment "A one way communication process from a satellite to an operator." .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000022
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000022> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "payload data communication"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000020> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000023
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000023> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "activity status"@en .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000024
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000024> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "active"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000023> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000025
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000025> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "inactive"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000023> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000026
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000026> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "nadir pointed"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000004> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000027
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000027> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "orbit"@en .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000028
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000028> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "orbit determination"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+
+
 
 ###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
 
