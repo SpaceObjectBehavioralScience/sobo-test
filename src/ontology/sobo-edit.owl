@@ -32,7 +32,7 @@
 
 <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000001> rdf:type owl:Class ;
                                                                                                                           
-                                                                                                                          rdfs:label "maneuver"@en ;
+                                                                                                                          rdfs:label "orbital maneuver"@en ;
                                                                                                                           
                                                                                                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
                                                                                                                           
@@ -54,7 +54,9 @@
 
 <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000003> rdf:type owl:Class ;
                                                                                                                           
-                                                                                                                          rdfs:label "attitude state"@en .
+                                                                                                                          rdfs:label "attitude state"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000020> .
 
 
 
@@ -190,7 +192,7 @@
                                                                                                                           
                                                                                                                           rdfs:label "satellite"@en ;
                                                                                                                           
-                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000000> .
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000042> .
 
 
 
@@ -262,7 +264,9 @@
 
 <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000023> rdf:type owl:Class ;
                                                                                                                           
-                                                                                                                          rdfs:label "activity status"@en .
+                                                                                                                          rdfs:label "activity status"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000020> .
 
 
 
@@ -292,7 +296,7 @@
                                                                                                                           
                                                                                                                           rdfs:label "nadir pointed"@en ;
                                                                                                                           
-                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000004> .
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000008> .
 
 
 
@@ -300,7 +304,9 @@
 
 <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000027> rdf:type owl:Class ;
                                                                                                                           
-                                                                                                                          rdfs:label "orbit"@en .
+                                                                                                                          rdfs:label "orbit"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
 
 
 
@@ -311,6 +317,156 @@
                                                                                                                           rdfs:label "orbit determination"@en ;
                                                                                                                           
                                                                                                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000029
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000029> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC compliance status"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000020> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000030
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000030> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC compliant"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000029> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000031
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000031> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC GEO compliant"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000030> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000032
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000032> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC graveyard compliant"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000030> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000033
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000033> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC orbitally compliant"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000030> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000034
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000034> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC attitudinally compliant"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000030> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000035
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000035> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC safed compliant"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000030> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000036
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000036> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC orbitally compliant in GEO"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000033> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000037
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000037> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC orbitally compliant in graveyard"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000033> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000038
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000038> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC attitudinally compliant in GEO"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000034> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000039
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000039> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC attitudinally compliant in graveyard"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000034> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000040
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000040> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC safed compliant in GEO"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000035> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000041
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000041> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "IADC safed compliant in graveyard"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000035> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000042
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000042> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "man made space object"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000000> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000043
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000043> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "geostationary orbit"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000027> .
 
 
 
