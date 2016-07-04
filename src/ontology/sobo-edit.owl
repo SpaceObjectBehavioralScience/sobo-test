@@ -4,12 +4,12 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://purl.sobs.org/sobs/> .
+@base <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl> .
 
-<https://purl.sobs.org/sobs/> rdf:type owl:Ontology ;
-                              
-                              owl:imports <http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl> ,
-                                          <http://purl.obolibrary.org/obo/ro/core.owl> .
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl> rdf:type owl:Ontology ;
+                                                                                                             
+                                                                                                             owl:imports <http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl> ,
+                                                                                                                         <http://purl.obolibrary.org/obo/ro/core.owl> .
 
 
 #################################################################
