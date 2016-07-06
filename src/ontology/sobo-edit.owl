@@ -468,11 +468,12 @@
                                            
                                            rdfs:label "IADC GEO compliant"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> ;
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000029> ;
                                            
                                            rdfs:comment """Example: 
 If the states 'attudinally compliant in GEO', 'orbitaly compliant in GEO', and 'safed compliant in GEO' inhere in some SO, and its orbital state is 'in GEO', then it is IADC compliant in GEO.
 To be 'safed compliant in GEO', an SO should have a very low probability of bearing the state 'fully safed' or 'partially safe'.
+To bear the state attudinally compliant in GEO', there must be a high probability that the SO has the attitude state 'controlled'. 
 etc.""" .
 
 
