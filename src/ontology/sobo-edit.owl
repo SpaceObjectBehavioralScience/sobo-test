@@ -425,19 +425,19 @@
                                            rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000055> ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
-                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000023>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
                                                              owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000054>
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
-                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000046>
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000023>
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
                                                              owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000003>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000046>
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
@@ -454,7 +454,11 @@
                                            
                                            rdfs:label "IADC compliant"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000029> .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000029> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000052>
+                                                           ] .
 
 
 
@@ -464,7 +468,12 @@
                                            
                                            rdfs:label "IADC GEO compliant"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> ;
+                                           
+                                           rdfs:comment """Example: 
+If the states 'attudinally compliant in GEO', 'orbitaly compliant in GEO', and 'safed compliant in GEO' inhere in some SO, and its orbital state is 'in GEO', then it is IADC compliant in GEO.
+To be 'safed compliant in GEO', an SO should have a very low probability of bearing the state 'fully safed' or 'partially safe'.
+etc.""" .
 
 
 
@@ -484,7 +493,11 @@
                                            
                                            rdfs:label "IADC orbitally compliant"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000046>
+                                                           ] .
 
 
 
@@ -494,7 +507,11 @@
                                            
                                            rdfs:label "IADC attitudinally compliant"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000003>
+                                                           ] .
 
 
 
@@ -758,9 +775,65 @@
 
 <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000059> rdf:type owl:Class ;
                                                                                                                           
-                                                                                                                          rdfs:label "IADC historically compliant"@en ;
+                                                                                                                          rdfs:label "IADC operator historically compliant"@en ;
                                                                                                                           
-                                                                                                                          rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> .
+                                                                                                                          rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> ,
+                                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                                            owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                                                                                                            owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000054>
+                                                                                                                                          ] .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000060
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000060> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "in GEO"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000046> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000061
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000061> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "in graveyard orbit"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000046> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000062
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000062> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "in LEO"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000046> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000063
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000063> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "fully safed"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000052> ;
+                                                                                                                          
+                                                                                                                          rdfs:comment "Fully safed means the satellite has 1)  no residual propellant, 2) discharged batteries, 3) vented pressure vessels, and 4) flywheels/momentum wheels spun down." .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000064
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000064> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "partially safed"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000052> .
 
 
 
