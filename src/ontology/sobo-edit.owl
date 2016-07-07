@@ -130,9 +130,19 @@
                                            
                                            rdfs:label "attitude state"@en ;
                                            
-                                           rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000055> ;
+                                           rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000055> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000059>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000069>
+                                                           ] ;
                                            
-                                           <http://purl.obolibrary.org/obo/IAO_0000118> "attitude knowledge" .
+                                           <http://purl.obolibrary.org/obo/IAO_0000118> "attitude knowledge" ;
+                                           
+                                           rdfs:comment "Attitude state is a characteristic of a space object  that categorizes information about its attitude, such as whether or not the attitude is controlled." .
 
 
 
@@ -142,7 +152,11 @@
                                            
                                            rdfs:label "controlled"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000003> .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000003> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000044> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000038>
+                                                           ] .
 
 
 
@@ -388,6 +402,10 @@
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://purl.obolibrary.org/obo/RO_0000057> ;
                                                              owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000000>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000066> ;
+                                                             owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000068>
                                                            ] .
 
 
@@ -402,14 +420,7 @@
                                                                  owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
                                                                                       [ rdf:type owl:Restriction ;
                                                                                         owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000048> ;
-                                                                                        owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                                             owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000027>
-                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                    owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000049> ;
-                                                                                                                                    owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000046>
-                                                                                                                                  ]
-                                                                                                                                )
-                                                                                                           ]
+                                                                                        owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000067>
                                                                                       ]
                                                                                     )
                                                                ] .
@@ -422,27 +433,7 @@
                                            
                                            rdfs:label "IADC compliance status"@en ;
                                            
-                                           rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000055> ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
-                                                             owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000054>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
-                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000023>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
-                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000003>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
-                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000046>
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
-                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000052>
-                                                           ] ;
+                                           rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000055> ;
                                            
                                            <http://purl.obolibrary.org/obo/IAO_0000118> "IADC compliance knowledge" .
 
@@ -454,11 +445,7 @@
                                            
                                            rdfs:label "IADC compliant"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000029> ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
-                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000052>
-                                                           ] .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000029> .
 
 
 
@@ -468,7 +455,11 @@
                                            
                                            rdfs:label "IADC GEO compliant"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000029> ;
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000044> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000030>
+                                                           ] ;
                                            
                                            rdfs:comment """Example: 
 If the states 'attudinally compliant in GEO', 'orbitaly compliant in GEO', and 'safed compliant in GEO' inhere in some SO, and its orbital state is 'in GEO', then it is IADC compliant in GEO.
@@ -484,7 +475,11 @@ etc.""" .
                                            
                                            rdfs:label "IADC graveyard compliant"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000044> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000030>
+                                                           ] .
 
 
 
@@ -522,7 +517,11 @@ etc.""" .
                                            
                                            rdfs:label "IADC safed compliant"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000052>
+                                                           ] .
 
 
 
@@ -532,7 +531,11 @@ etc.""" .
                                            
                                            rdfs:label "IADC orbitally compliant in GEO"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000033> .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000033> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000044> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000031>
+                                                           ] .
 
 
 
@@ -552,7 +555,11 @@ etc.""" .
                                            
                                            rdfs:label "IADC attitudinally compliant in GEO"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000034> .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000034> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000044> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000031>
+                                                           ] .
 
 
 
@@ -572,7 +579,11 @@ etc.""" .
                                            
                                            rdfs:label "IADC safed compliant in GEO"@en ;
                                            
-                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000035> .
+                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000035> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000044> ;
+                                                             owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000031>
+                                                           ] .
 
 
 
@@ -612,7 +623,17 @@ etc.""" .
                                            
                                            rdfs:label "orbital state"@en ;
                                            
-                                           rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000055> ;
+                                           rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000055> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000067>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000059>
+                                                           ] ;
+                                           
+                                           rdfs:comment "Orbital state is a characteristic of a space object  that categorizes information about its orbital path, such as the region in which the path occurs (e.g., GEO or LEO) or parameters of the shape that describes the orbital path (e.g., circular or eliptical)." ;
                                            
                                            <http://purl.obolibrary.org/obo/IAO_0000118> "orbital knowledge" .
 
@@ -628,14 +649,7 @@ etc.""" .
                                                                  owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
                                                                                       [ rdf:type owl:Restriction ;
                                                                                         owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000048> ;
-                                                                                        owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                                             owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000027>
-                                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                                    owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000049> ;
-                                                                                                                                    owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000003>
-                                                                                                                                  ]
-                                                                                                                                )
-                                                                                                           ]
+                                                                                        owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000069>
                                                                                       ]
                                                                                     )
                                                                ] .
@@ -672,7 +686,15 @@ etc.""" .
                                            
                                            rdfs:label "safed state"@en ;
                                            
-                                           rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000055> .
+                                           rdfs:subClassOf <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000055> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000059>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
+                                                             owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000066>
+                                                           ] .
 
 
 
@@ -781,7 +803,7 @@ etc.""" .
                                                                                                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000030> ,
                                                                                                                                           [ rdf:type owl:Restriction ;
                                                                                                                                             owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000045> ;
-                                                                                                                                            owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000054>
+                                                                                                                                            owl:someValuesFrom <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000071>
                                                                                                                                           ] .
 
 
@@ -792,7 +814,13 @@ etc.""" .
                                                                                                                           
                                                                                                                           rdfs:label "in GEO"@en ;
                                                                                                                           
-                                                                                                                          rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000046> .
+                                                                                                                          rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000046> ,
+                                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                                            owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000044> ;
+                                                                                                                                            owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000036>
+                                                                                                                                          ] ;
+                                                                                                                          
+                                                                                                                          rdfs:comment "An SO is in GEO if its orbital path is in the geostationary orbit zone." .
 
 
 
@@ -835,6 +863,96 @@ etc.""" .
                                                                                                                           rdfs:label "partially safed"@en ;
                                                                                                                           
                                                                                                                           rdfs:subClassOf <https://purl.sobs.org/sobs//SOBO_0000052> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000066
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000066> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "safed state datum"@en ;
+                                                                                                                          
+                                                                                                                          owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                                                                owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000027>
+                                                                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                                                                       owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000049> ;
+                                                                                                                                                                       owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000052>
+                                                                                                                                                                     ]
+                                                                                                                                                                   )
+                                                                                                                                              ] .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000067
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000067> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "orbital datum"@en ;
+                                                                                                                          
+                                                                                                                          owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                                                                owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000027>
+                                                                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                                                                       owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000049> ;
+                                                                                                                                                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                                                                                            owl:unionOf ( <https://purl.sobs.org/sobs//SOBO_0000027>
+                                                                                                                                                                                                          <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000068>
+                                                                                                                                                                                                        )
+                                                                                                                                                                                          ]
+                                                                                                                                                                     ]
+                                                                                                                                                                   )
+                                                                                                                                              ] .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000068
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000068> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "orbital path"@en ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141> .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000069
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000069> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "attitude datum"@en ;
+                                                                                                                          
+                                                                                                                          owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                                                                owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000027>
+                                                                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                                                                       owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000049> ;
+                                                                                                                                                                       owl:someValuesFrom <https://purl.sobs.org/sobs//SOBO_0000003>
+                                                                                                                                                                     ]
+                                                                                                                                                                   )
+                                                                                                                                              ] ;
+                                                                                                                          
+                                                                                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                                                                                                          
+                                                                                                                          <http://purl.obolibrary.org/obo/IAO_0000116> "logical definition to be replaced by datum about some attitude, once attitude is added to the ontology" .
+
+
+
+###  https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000071
+
+<https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000071> rdf:type owl:Class ;
+                                                                                                                          
+                                                                                                                          rdfs:label "operator history datum"@en ;
+                                                                                                                          
+                                                                                                                          owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                                                                owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000027>
+                                                                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                                                                       owl:onProperty <https://purl.sobs.org/sobs//SOBO_0000049> ;
+                                                                                                                                                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                                                                                            owl:unionOf ( <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000053>
+                                                                                                                                                                                                          <https://raw.githubusercontent.com/SpaceObjectBehavioralScience/sobo-test/master/src/ontology/sobo-edit.owl/SOBO_0000054>
+                                                                                                                                                                                                        )
+                                                                                                                                                                                          ]
+                                                                                                                                                                     ]
+                                                                                                                                                                   )
+                                                                                                                                              ] .
 
 
 
